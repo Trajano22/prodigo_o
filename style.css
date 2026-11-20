@@ -238,10 +238,9 @@ h1, h2, h3 { font-family: var(--display); color: var(--white); line-height: 1.1;
   padding: clamp(56px, 8vw, 110px) var(--gutter) clamp(64px, 9vw, 120px);
   display: grid; justify-items: center; gap: 28px;
 }
-.quote-end img { opacity: .9; }
+.quote-end img { opacity: 1; }
 .quote-end p {
   font-family: var(--display); font-size: clamp(26px, 3.6vw, 44px); font-weight: 700; line-height: 1.2; color: var(--white);
-  background: linear-gradient(90deg, var(--white), var(--steel)); -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .quote-end cite {
   display: block; margin-top: 18px; font-style: normal;
