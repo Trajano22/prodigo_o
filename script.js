@@ -94,3 +94,14 @@ if ('IntersectionObserver' in window) {
   }), { threshold: 0.12 });
   revealEls.forEach(el => io.observe(el));
 }
+
+// "Voltar ao topo" e o logo: o cabeçalho com id="topo" fica grudado no alto
+// da tela, então o navegador acha que já está no lugar e não rola. Rola na mão.
+document.querySelectorAll('a[href="#topo"]').forEach(a =>
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+    history.replaceState(null, '', location.pathname + location.search);
+  })
+);
