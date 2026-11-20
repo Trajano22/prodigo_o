@@ -88,7 +88,7 @@ h1, h2, h3 { font-family: var(--display); color: var(--white); line-height: 1.1;
   padding: clamp(56px, 9vw, 120px) var(--gutter) clamp(64px, 8vw, 110px);
 }
 .hero h1 { font-size: clamp(32px, 3.9vw, 54px); margin-bottom: 24px; }
-.hero h1 em { font-style: normal; color: transparent; background: linear-gradient(90deg, var(--mist), var(--steel)); -webkit-background-clip: text; background-clip: text; }
+.hero h1 em { font-style: normal; color: var(--white); }
 .lead { font-size: clamp(16px, 1.5vw, 19px); max-width: 540px; margin-bottom: 34px; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 36px; }
 .hero-tags { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
