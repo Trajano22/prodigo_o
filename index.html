@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prodigo_o — Sites, sistemas e design</title>
-  <meta name="description" content="Prodigo_o cria sites, sistemas sob medida e artes para redes sociais. Peça seu orçamento.">
+  <title>Prodigo_o — Sites, sistemas, jogos e design</title>
+  <meta name="description" content="Prodigo_o cria sites, sistemas sob medida, jogos e artes para redes sociais. Peça seu orçamento.">
   <meta name="theme-color" content="#0E1D21">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,8 +35,8 @@
   <section class="hero">
     <div class="hero-text">
       <p class="eyebrow">// estúdio digital · atendimento online</p>
-      <h1>Sites, sistemas e artes que fazem o seu negócio <em>trabalhar melhor.</em></h1>
-      <p class="lead">Eu crio desde a página que traz clientes até o sistema que organiza a sua operação. Projeto feito sob medida, do jeito que a sua empresa funciona.</p>
+      <h1>Sites, sistemas, jogos e artes que fazem o seu negócio <em>trabalhar melhor.</em></h1>
+      <p class="lead">Eu crio desde a página que traz clientes até o sistema que organiza a sua operação, e também jogos que rodam direto no navegador. Projeto feito sob medida, do jeito que a sua empresa funciona.</p>
       <div class="hero-cta">
         <a href="#contato" class="btn btn-light">Pedir orçamento</a>
         <a href="#trabalhos" class="btn btn-ghost">Ver trabalhos</a>
@@ -46,6 +46,7 @@
         <li>Sistemas web</li>
         <li>Social media</li>
         <li>Design gráfico</li>
+        <li>Jogos</li>
       </ul>
     </div>
     <div class="hero-visual" aria-hidden="true">
@@ -87,6 +88,12 @@
         <p>Banners, materiais para divulgação, guias e peças avulsas para internet ou impressão.</p>
         <ul><li>Banners e cartazes</li><li>Peças para anúncio</li><li>Material impresso</li></ul>
       </article>
+      <article class="service">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M7 8h10a4 4 0 0 1 4 4v1.5a3.5 3.5 0 0 1-6.3 2.1L14 14.5h-4l-.7 1.1A3.5 3.5 0 0 1 3 13.5V12a4 4 0 0 1 4-4z"/><path d="M8 11v3M6.5 12.5h3"/><circle cx="15.5" cy="11.5" r=".6"/><circle cx="17.5" cy="13" r=".6"/></svg></div>
+        <h3>Jogos</h3>
+        <p>Jogos para navegador e computador, do conceito à jogabilidade: partidas online, gráficos 3D ou pixel art.</p>
+        <ul><li>Jogos web e 3D</li><li>Modo online</li><li>Jogos promocionais</li></ul>
+      </article>
     </div>
   </section>
 
@@ -102,6 +109,7 @@
       <button class="filter" data-filter="sistemas" role="tab" aria-selected="false">Sistemas</button>
       <button class="filter" data-filter="sites" role="tab" aria-selected="false">Sites</button>
       <button class="filter" data-filter="design" role="tab" aria-selected="false">Design &amp; social</button>
+      <button class="filter" data-filter="jogos" role="tab" aria-selected="false">Jogos</button>
     </div>
 
     <div class="works">
@@ -169,15 +177,27 @@
         </div>
       </article>
 
-      <article class="work" data-cat="sites">
+      <article class="work" data-cat="jogos">
         <div class="work-gallery" data-gallery>
           <img src="img/xadrez-prisma.jpg" alt="Xadrez Prisma — jogo no navegador" loading="lazy">
         </div>
         <div class="work-info">
-          <span class="tag">Experiência web</span>
+          <span class="tag">Jogo</span>
           <h3>Xadrez Prisma</h3>
-          <p>Jogo de xadrez 3D que roda direto no navegador, com modo online.</p>
+          <p>Jogo de xadrez 3D com câmera isométrica, cenário de floresta e modo online. Roda direto no navegador.</p>
           <a class="link" href="https://trajano22.github.io/xadrez-prisma/" target="_blank" rel="noopener">Jogar agora ↗</a>
+        </div>
+      </article>
+
+      <article class="work" data-cat="jogos">
+        <div class="work-gallery" data-gallery>
+          <img src="img/jogo-chess.jpg" alt="Chess — xadrez isométrico em Python" loading="lazy">
+          <img src="img/jogo-ruamorta.jpg" alt="Rua Morta — survival pós-apocalíptico" loading="lazy">
+        </div>
+        <div class="work-info">
+          <span class="tag">Jogos</span>
+          <h3>Chess &amp; Rua Morta</h3>
+          <p>Chess, um xadrez isométrico feito em Python/Pygame, e Rua Morta, um jogo de sobrevivência pós-apocalíptico.</p>
         </div>
       </article>
     </div>
@@ -223,6 +243,7 @@
           <label class="chip"><input type="checkbox" name="servico" value="Sistema sob medida"><span>Sistema</span></label>
           <label class="chip"><input type="checkbox" name="servico" value="Social media"><span>Social media</span></label>
           <label class="chip"><input type="checkbox" name="servico" value="Design gráfico"><span>Design</span></label>
+          <label class="chip"><input type="checkbox" name="servico" value="Jogo"><span>Jogo</span></label>
         </div>
       </fieldset>
       <label>Conte um pouco sobre o projeto
@@ -246,7 +267,7 @@
 
 <footer class="footer">
   <span class="footer-brand"><img src="img/logo.svg" alt="" width="26" height="26"><span class="logo-text">Prodigo_o</span></span>
-  <span>© <span id="ano"></span> · Sites, sistemas e design sob orçamento</span>
+  <span>© <span id="ano"></span> · Sites, sistemas, jogos e design sob orçamento</span>
   <a href="#topo">Voltar ao topo ↑</a>
 </footer>
 

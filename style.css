@@ -117,9 +117,9 @@ h1, h2, h3 { font-family: var(--display); color: var(--white); line-height: 1.1;
 .section-sub { margin-top: 16px; font-size: 17px; }
 
 /* ── Serviços ── */
-.services { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.services { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
 .service {
-  padding: 28px 24px; border-radius: var(--radius);
+  padding: 26px 20px; border-radius: var(--radius);
   background: linear-gradient(180deg, rgba(37,63,71,0.55), rgba(18,46,52,0.55));
   border: 1px solid var(--line);
   transition: transform .25s, border-color .25s;
@@ -295,6 +295,7 @@ h1, h2, h3 { font-family: var(--display); color: var(--white); line-height: 1.1;
 /* ── Responsivo ── */
 @media (max-width: 1080px) {
   .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .services .service:last-child { grid-column: span 2; }
   .works { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -321,6 +322,7 @@ h1, h2, h3 { font-family: var(--display); color: var(--white); line-height: 1.1;
 }
 @media (max-width: 640px) {
   .services, .works, .steps { grid-template-columns: 1fr; }
+  .services .service:last-child { grid-column: auto; }
   .work-wide { grid-column: auto; }
   .work-gallery, .work-wide .work-gallery { height: 210px; }
   .steps li { padding: 24px 4px; }
