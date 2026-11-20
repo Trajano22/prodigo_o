@@ -16,8 +16,9 @@
   --radius: 18px;
   --gutter: clamp(16px, 5vw, 72px);
   --maxw: 1240px;
-  --mono: 'Space Mono', ui-monospace, monospace;
-  --sans: 'Syne', system-ui, sans-serif;
+  --mono: 'Inter', system-ui, sans-serif;  /* rótulos e botões */
+  --sans: 'Inter', system-ui, sans-serif;
+  --display: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
   color-scheme: dark;
 }
 
@@ -37,19 +38,19 @@ body {
 }
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
-h1, h2, h3 { color: var(--white); line-height: 1.1; font-weight: 800; letter-spacing: -0.01em; }
+h1, h2, h3 { font-family: var(--display); color: var(--white); line-height: 1.1; font-weight: 800; letter-spacing: -0.01em; }
 :focus-visible { outline: 2px solid var(--mist); outline-offset: 3px; border-radius: 6px; }
 
 .eyebrow {
-  font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em;
+  font-family: var(--mono); font-size: 12.5px; font-weight: 600; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--steel); margin-bottom: 18px;
 }
 
 /* ── Botões ── */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: 0.06em;
-  text-transform: uppercase; padding: 15px 26px; border-radius: 999px;
+  font-family: var(--mono); font-size: 14px; font-weight: 600; letter-spacing: 0.02em;
+  padding: 15px 26px; border-radius: 999px;
   border: 1px solid transparent; cursor: pointer;
   transition: transform .2s, background .2s, color .2s, border-color .2s, box-shadow .2s;
 }
@@ -58,7 +59,7 @@ h1, h2, h3 { color: var(--white); line-height: 1.1; font-weight: 800; letter-spa
 .btn-light:hover { background: var(--white); }
 .btn-ghost { border-color: rgba(171,175,181,0.35); color: var(--white); }
 .btn-ghost:hover { border-color: var(--mist); background: rgba(171,175,181,0.08); }
-.btn-sm { padding: 10px 18px; font-size: 11px; }
+.btn-sm { padding: 10px 18px; font-size: 13px; }
 .btn-block { width: 100%; }
 
 /* ── Navegação ── */
@@ -71,12 +72,11 @@ h1, h2, h3 { color: var(--white); line-height: 1.1; font-weight: 800; letter-spa
   border-bottom: 1px solid var(--line);
 }
 .logo { display: flex; align-items: center; gap: 10px; margin-right: auto; }
-.logo-mark { width: 38px; height: 38px; transition: transform .3s; }
+.logo-mark { width: 30px; height: 30px; transition: transform .3s; }
 .logo:hover .logo-mark { transform: rotate(-6deg) scale(1.05); }
-.logo-text { font-weight: 800; font-size: 20px; color: var(--white); letter-spacing: -0.01em; }
-.logo-under { color: var(--steel); font-family: var(--mono); font-weight: 700; }
+.logo-text { font-family: var(--display); font-weight: 800; font-size: 20px; color: var(--white); letter-spacing: -0.01em; }
 .nav-links { display: flex; gap: 28px; }
-.nav-links a { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mist); transition: color .2s; }
+.nav-links a { font-family: var(--sans); font-size: 15px; font-weight: 500; color: var(--mist); transition: color .2s; }
 .nav-links a:hover { color: var(--white); }
 .nav-toggle { display: none; background: none; border: 0; width: 40px; height: 40px; cursor: pointer; }
 .nav-toggle span { display: block; width: 22px; height: 2px; margin: 6px auto; background: var(--white); transition: transform .25s; }
@@ -93,7 +93,7 @@ h1, h2, h3 { color: var(--white); line-height: 1.1; font-weight: 800; letter-spa
 .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 36px; }
 .hero-tags { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
 .hero-tags li {
-  font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase;
   padding: 7px 14px; border-radius: 999px; border: 1px solid var(--line); color: var(--steel);
   background: rgba(18, 46, 52, 0.5);
 }
@@ -133,7 +133,7 @@ h1, h2, h3 { color: var(--white); line-height: 1.1; font-weight: 800; letter-spa
 .service h3 { font-size: 20px; margin-bottom: 10px; }
 .service p { font-size: 14.5px; margin-bottom: 18px; }
 .service ul { list-style: none; display: grid; gap: 6px; }
-.service li { font-family: var(--mono); font-size: 11.5px; color: var(--steel); padding-left: 16px; position: relative; }
+.service li { font-family: var(--mono); font-size: 13px; color: var(--mist); padding-left: 16px; position: relative; }
 .service li::before { content: ''; position: absolute; left: 0; top: 8px; width: 7px; height: 1px; background: var(--steel); }
 
 /* ── Trabalhos ── */
@@ -169,7 +169,7 @@ h1, h2, h3 { color: var(--white); line-height: 1.1; font-weight: 800; letter-spa
 .work-info h3 { font-size: 21px; }
 .work-info p { font-size: 14.5px; }
 .tag {
-  align-self: flex-start; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase;
+  align-self: flex-start; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--white); padding: 4px 10px; border-radius: 6px; background: var(--teal);
 }
 .result { font-family: var(--mono); font-size: 12.5px !important; color: var(--steel); border-left: 2px solid var(--steel); padding-left: 12px; }
@@ -208,7 +208,7 @@ h1, h2, h3 { color: var(--white); line-height: 1.1; font-weight: 800; letter-spa
   transition: border-color .2s, transform .2s; word-break: break-word;
 }
 .channels a:hover { border-color: rgba(171,175,181,0.4); transform: translateX(4px); }
-.channels span { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--steel); }
+.channels span { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--steel); }
 
 .quote { display: grid; gap: 18px; padding: 28px; border-radius: 20px; background: rgba(14,29,33,0.7); border: 1px solid var(--line); }
 .quote label, .quote legend { display: grid; gap: 8px; font-size: 14px; font-weight: 600; color: var(--white); }
@@ -240,7 +240,7 @@ h1, h2, h3 { color: var(--white); line-height: 1.1; font-weight: 800; letter-spa
 }
 .quote-end img { opacity: .9; }
 .quote-end p {
-  font-size: clamp(26px, 3.6vw, 44px); font-weight: 700; line-height: 1.2; color: var(--white);
+  font-family: var(--display); font-size: clamp(26px, 3.6vw, 44px); font-weight: 700; line-height: 1.2; color: var(--white);
   background: linear-gradient(90deg, var(--white), var(--steel)); -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .quote-end cite {
