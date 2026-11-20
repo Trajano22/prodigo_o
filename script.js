@@ -75,11 +75,11 @@ form.addEventListener('submit', e => {
   const empresa = (d.get('empresa') || '').trim();
   const servicos = d.getAll('servico');
   const linhas = [
-    `Olá! Vim pelo site da Prodigo_o e gostaria de um orçamento.`,
+    `Olá! Vim pelo site da Prodigo_o.`,
     ``,
     `*Nome:* ${nome}`,
     empresa ? `*Empresa/projeto:* ${empresa}` : null,
-    servicos.length ? `*Serviço:* ${servicos.join(', ')}` : null,
+    servicos.length ? `*Assunto:* ${servicos.join(', ')}` : null,
     `*Sobre o projeto:* ${msg}`,
   ].filter(l => l !== null);
   window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(linhas.join('\n'))}`, '_blank', 'noopener');
