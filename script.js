@@ -26,7 +26,7 @@ const works = document.querySelectorAll('.work');
 filters.forEach(btn => btn.addEventListener('click', () => {
   filters.forEach(b => { b.classList.toggle('is-active', b === btn); b.setAttribute('aria-selected', String(b === btn)); });
   const cat = btn.dataset.filter;
-  works.forEach(w => w.classList.toggle('is-hidden', cat !== 'todos' && w.dataset.cat !== cat));
+  works.forEach(w => w.classList.toggle('is-hidden', cat !== 'todos' && !w.dataset.cat.split(' ').includes(cat)));
 }));
 
 // Lightbox: mostra todas as imagens do projeto, inclusive as que não aparecem na capa
